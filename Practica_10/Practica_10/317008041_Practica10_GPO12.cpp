@@ -735,8 +735,8 @@ void animacion2()
 			movKitZ -= 0.5f;
 			if (movKitZ < 0)
 			{
-				recorrido4 = false;
-				recorrido5 = true;
+				recorrido3 = false;
+				recorrido1 = true;
 			}
 		}
 

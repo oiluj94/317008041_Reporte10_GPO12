@@ -1,0 +1,13 @@
+﻿  317008041_Practica10_GPO12.cpp
+D:\8 semestre\computacion grafica\practicas\pract10\317008041_Reporte10_GPO12\Practica_10\Practica_10\317008041_Practica10_GPO12.cpp(306,24): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+D:\8 semestre\computacion grafica\practicas\pract10\317008041_Reporte10_GPO12\Practica_10\Practica_10\317008041_Practica10_GPO12.cpp(314,3): error C3861: 'animacion2': no se encontró el identificador
+D:\8 semestre\computacion grafica\practicas\pract10\317008041_Reporte10_GPO12\Practica_10\Practica_10\317008041_Practica10_GPO12.cpp(527,15): warning C4305: '+=': truncamiento de 'double' a 'float'
+D:\8 semestre\computacion grafica\practicas\pract10\317008041_Reporte10_GPO12\Practica_10\Practica_10\317008041_Practica10_GPO12.cpp(534,15): warning C4305: '-=': truncamiento de 'double' a 'float'
+D:\8 semestre\computacion grafica\practicas\pract10\317008041_Reporte10_GPO12\Practica_10\Practica_10\317008041_Practica10_GPO12.cpp(540,15): warning C4305: '+=': truncamiento de 'double' a 'float'
+D:\8 semestre\computacion grafica\practicas\pract10\317008041_Reporte10_GPO12\Practica_10\Practica_10\317008041_Practica10_GPO12.cpp(546,15): warning C4305: '-=': truncamiento de 'double' a 'float'
+D:\8 semestre\computacion grafica\practicas\pract10\317008041_Reporte10_GPO12\Practica_10\Practica_10\317008041_Practica10_GPO12.cpp(786,11): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+D:\8 semestre\computacion grafica\practicas\pract10\317008041_Reporte10_GPO12\Practica_10\Practica_10\317008041_Practica10_GPO12.cpp(787,11): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+D:\8 semestre\computacion grafica\practicas\pract10\317008041_Reporte10_GPO12\Practica_10\Practica_10\317008041_Practica10_GPO12.cpp(791,18): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+D:\8 semestre\computacion grafica\practicas\pract10\317008041_Reporte10_GPO12\Practica_10\Practica_10\317008041_Practica10_GPO12.cpp(792,18): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+D:\8 semestre\computacion grafica\practicas\pract10\317008041_Reporte10_GPO12\Practica_10\Practica_10\317008041_Practica10_GPO12.cpp(794,10): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+D:\8 semestre\computacion grafica\practicas\pract10\317008041_Reporte10_GPO12\Practica_10\Practica_10\317008041_Practica10_GPO12.cpp(795,10): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
