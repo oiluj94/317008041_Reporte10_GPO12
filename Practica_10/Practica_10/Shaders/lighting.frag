@@ -83,9 +83,9 @@ void main( )
     result += CalcSpotLight( spotLight, norm, FragPos, viewDir );
  	
     color = vec4( result,texture(material.diffuse, TexCoords).rgb );
-	  if(color.a < 0.1)
+	  if(color.a == 0.1)
         discard;
-
+        color.a=1;
 }
 
 // Calculates the color when using a directional light.
