@@ -68,6 +68,11 @@ bool recorrido2 = false;
 bool recorrido3 = false;
 bool recorrido4 = false;
 bool recorrido5 = false;
+bool recorrido6 = false;
+bool recorrido7 = false;
+
+
+
 
 // Deltatime
 GLfloat deltaTime = 0.0f;	
@@ -311,7 +316,7 @@ int main()
 		glfwPollEvents();
 		DoMovement();
 		animacion();
-		//animacion2();
+		
 
 		// Clear the colorbuffer
 		glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
@@ -643,7 +648,8 @@ void animacion()
 	{
 		if (recorrido1)
 		{
-			movKitX += 0.5f;
+			rotKit = 0;
+			movKitX += 0.1f;
 			
 			if (movKitX > 90)
 			{
@@ -654,7 +660,7 @@ void animacion()
 		if (recorrido2)
 		{
 			rotKit = 270;
-			movKitZ += 0.5f;
+			movKitZ += 0.1f;
 			if (movKitZ > 90)
 			{
 				recorrido2 = false;
@@ -666,7 +672,7 @@ void animacion()
 		if (recorrido3)
 		{
 			rotKit = 180;
-			movKitX -= 0.5f;
+			movKitX -= 0.1f;
 			if (movKitX < 0)
 			{
 				recorrido3 = false;
@@ -677,7 +683,7 @@ void animacion()
 		if (recorrido4)
 		{
 			rotKit = 90;
-			movKitZ -= 0.5f;
+			movKitZ -= 0.1f;
 			if (movKitZ < 0)
 			{
 				recorrido4 = false;
@@ -687,64 +693,40 @@ void animacion()
 		if (recorrido5)
 		{
 			rotKit = 0;
-			movKitZ += 0.1f;
-			if (movKitZ > 0)
-			{
-				recorrido5 = false;
-				recorrido1 = true;
-			}
-		}
+			movKitX += 0.1f;
 
-
-	}
-}
-
-void animacion2()
-{
-
-	//Movimiento del coche
-	if (circuito)
-	{
-		if (recorrido1)
-		{
-			movKitX += 0.5f;
-			
 			if (movKitX > 90)
 			{
-				recorrido1 = false;
-				recorrido2 = true;
+				recorrido5 = false;
+				recorrido6 = true;
 			}
 		}
-		if (recorrido2)
+		if (recorrido6)
 		{
-			rotKit = 315;
-			movKitZ += 0.25f;
-			movKitX -= 0.25f;
-
+			rotKit = 225;
+			movKitX -= 0.1f;
+			movKitZ += 0.1f;
 			if (movKitZ > 90)
 			{
-				recorrido2 = false;
-				recorrido3 = true;
-
+				recorrido6 = false;
+				recorrido7 = true;
 			}
 		}
-
-		if (recorrido3)
+		if (recorrido7)
 		{
 			rotKit = 90;
-			movKitZ -= 0.5f;
+			movKitZ -= 0.1f;
 			if (movKitZ < 0)
 			{
-				recorrido3 = false;
+				recorrido7 = false;
 				recorrido1 = true;
 			}
 		}
 
-		
-
-
 	}
 }
+
+
 
 void KeyCallback(GLFWwindow *window, int key, int scancode, int action, int mode)
 {
