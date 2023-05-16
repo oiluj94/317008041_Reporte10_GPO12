@@ -310,8 +310,8 @@ int main()
 		// Check if any events have been activiated (key pressed, mouse moved etc.) and call corresponding response functions
 		glfwPollEvents();
 		DoMovement();
-		//animacion();
-		animacion2();
+		animacion();
+		//animacion2();
 
 		// Clear the colorbuffer
 		glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
