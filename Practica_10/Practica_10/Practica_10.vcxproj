@@ -19,13 +19,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Camera.h" />
-    <ClInclude Include="Mesh.h" />
-    <ClInclude Include="Model.h" />
-    <ClInclude Include="Shader.h" />
-    <ClInclude Include="stb_image.h" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Shaders\anim.frag" />
     <None Include="Shaders\anim.vs" />
     <None Include="Shaders\anim2.frag" />
@@ -40,7 +33,17 @@
     <None Include="Shaders\modelLoading.vs" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="317008041_Practica10_GPO12.cpp" />
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="Mesh.h" />
+    <ClInclude Include="meshAnim.h" />
+    <ClInclude Include="Model.h" />
+    <ClInclude Include="modelAnim.h" />
+    <ClInclude Include="Shader.h" />
+    <ClInclude Include="stb_image.h" />
+    <ClInclude Include="Texture.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="317008041_Reporte10_GPO12.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

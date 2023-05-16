@@ -162,17 +162,8 @@ int main()
 	Model Piso((char*)"Models/Sea/Sea.obj");
 	Model SV((char*)"Models/Sea/salvavidas.obj");
 	//Model Box((char*)"Models/Box/Box.obj");
-	Model sofa((char*)"Models/simplesofa_obj/sofa_textura.obj");
-	Model ElReyCabeza((char*)"Models/ElRey/cabeza.obj");
-	Model ElReyCuerpo((char*)"Models/ElRey/cuerpo.obj");
-	Model ElReyBrazoDer((char*)"Models/ElRey/brazoDer.obj");
-	Model ElReyBrazoIzq((char*)"Models/ElRey/brazoIzq.obj");
-	Model ElReyAntebrazoDer((char*)"Models/ElRey/antebrazoDer.obj");
-	Model ElReyAntebrazoIzq((char*)"Models/ElRey/antebrazoIzq.obj");
-	Model ElReyManoIzq((char*)"Models/ElRey/manoIzq.obj");
-	Model ElReyManoDer((char*)"Models/ElRey/manoDer.obj");
-	Model ElReyPiernaIzq((char*)"Models/ElRey/piernaIzq.obj");
-	Model ElReyPiernaDer((char*)"Models/ElRey/piernaDer.obj");
+	Model sofa((char*)"Models/sillon_individual/sillon_individual.obj");
+
 
 	// First, set the container's VAO (and VBO)
 	GLuint VBO, VAO;
@@ -291,7 +282,7 @@ int main()
 
 		// Set material properties
 		glUniform3f(glGetUniformLocation(lightingShader.Program, "material.specular"), 0.0f,0.0f,0.0f);
-		glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 0.0f);
+		glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 4.0f);
 
 		// Create camera transformations
 		glm::mat4 view;
@@ -340,7 +331,7 @@ int main()
 		model = glm::translate(model, glm::vec3(0.0f, 0.1f, 0.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glUniform1f(glGetUniformLocation(Anim.Program, "time"), tiempo);
-		Piso.Draw(Anim);
+		//Piso.Draw(Anim);
 		glBindVertexArray(0);
 	     
 		Anim2.Use();
@@ -381,9 +372,9 @@ int main()
 
 		lightingShader.Use();
 
-		modelLoc = glGetUniformLocation(Anim2.Program, "model");
-		viewLoc = glGetUniformLocation(Anim2.Program, "view");
-		projLoc = glGetUniformLocation(Anim2.Program, "projection");
+		modelLoc = glGetUniformLocation(lightingShader.Program, "model");
+		viewLoc = glGetUniformLocation(lightingShader.Program, "view");
+		projLoc = glGetUniformLocation(lightingShader.Program, "projection");
 		// Set matrices
 		glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
 		glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
@@ -391,153 +382,12 @@ int main()
 		model = glm::mat4(1);
 		model = glm::translate(model, glm::vec3(0.0f, 0.1f, 0.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		glUniform1f(glGetUniformLocation(Anim.Program, "time"), tiempo);
-		ElReyCabeza.Draw(lightingShader);
+		glUniform1f(glGetUniformLocation(lightingShader.Program, "time"), tiempo);
+		sofa.Draw(lightingShader);
 		glBindVertexArray(0);
 
 
 
-		modelLoc = glGetUniformLocation(Anim2.Program, "model");
-		viewLoc = glGetUniformLocation(Anim2.Program, "view");
-		projLoc = glGetUniformLocation(Anim2.Program, "projection");
-		// Set matrices
-		glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
-		glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(0.0f, 0.1f, 0.0f));
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		glUniform1f(glGetUniformLocation(Anim.Program, "time"), tiempo);
-		ElReyCuerpo.Draw(lightingShader);
-		glBindVertexArray(0);
-
-
-
-		modelLoc = glGetUniformLocation(Anim2.Program, "model");
-		viewLoc = glGetUniformLocation(Anim2.Program, "view");
-		projLoc = glGetUniformLocation(Anim2.Program, "projection");
-		// Set matrices
-		glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
-		glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(0.0f, 0.1f, 0.0f));
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		glUniform1f(glGetUniformLocation(Anim.Program, "time"), tiempo);
-		ElReyBrazoDer.Draw(lightingShader);
-		glBindVertexArray(0);
-
-
-
-		modelLoc = glGetUniformLocation(Anim2.Program, "model");
-		viewLoc = glGetUniformLocation(Anim2.Program, "view");
-		projLoc = glGetUniformLocation(Anim2.Program, "projection");
-		// Set matrices
-		glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
-		glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(0.0f, 0.1f, 0.0f));
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		glUniform1f(glGetUniformLocation(Anim.Program, "time"), tiempo);
-		ElReyBrazoIzq.Draw(lightingShader);
-		glBindVertexArray(0);
-
-
-
-		modelLoc = glGetUniformLocation(Anim2.Program, "model");
-		viewLoc = glGetUniformLocation(Anim2.Program, "view");
-		projLoc = glGetUniformLocation(Anim2.Program, "projection");
-		// Set matrices
-		glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
-		glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(0.0f, 0.1f, 0.0f));
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		glUniform1f(glGetUniformLocation(Anim.Program, "time"), tiempo);
-		ElReyAntebrazoIzq.Draw(lightingShader);
-		glBindVertexArray(0);
-
-
-
-		modelLoc = glGetUniformLocation(Anim2.Program, "model");
-		viewLoc = glGetUniformLocation(Anim2.Program, "view");
-		projLoc = glGetUniformLocation(Anim2.Program, "projection");
-		// Set matrices
-		glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
-		glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(0.0f, 0.1f, 0.0f));
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		glUniform1f(glGetUniformLocation(Anim.Program, "time"), tiempo);
-		ElReyAntebrazoDer.Draw(lightingShader);
-		glBindVertexArray(0);
-
-
-
-		modelLoc = glGetUniformLocation(Anim2.Program, "model");
-		viewLoc = glGetUniformLocation(Anim2.Program, "view");
-		projLoc = glGetUniformLocation(Anim2.Program, "projection");
-		// Set matrices
-		glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
-		glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(0.0f, 0.1f, 0.0f));
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		glUniform1f(glGetUniformLocation(Anim.Program, "time"), tiempo);
-		ElReyManoDer.Draw(lightingShader);
-		glBindVertexArray(0);
-
-
-
-		modelLoc = glGetUniformLocation(Anim2.Program, "model");
-		viewLoc = glGetUniformLocation(Anim2.Program, "view");
-		projLoc = glGetUniformLocation(Anim2.Program, "projection");
-		// Set matrices
-		glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
-		glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(0.0f, 0.1f, 0.0f));
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		glUniform1f(glGetUniformLocation(Anim.Program, "time"), tiempo);
-		ElReyManoIzq.Draw(lightingShader);
-		glBindVertexArray(0);
-
-
-
-		modelLoc = glGetUniformLocation(Anim2.Program, "model");
-		viewLoc = glGetUniformLocation(Anim2.Program, "view");
-		projLoc = glGetUniformLocation(Anim2.Program, "projection");
-		// Set matrices
-		glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
-		glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(0.0f, 0.1f, 0.0f));
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		glUniform1f(glGetUniformLocation(Anim.Program, "time"), tiempo);
-		ElReyPiernaDer.Draw(lightingShader);
-		glBindVertexArray(0);
-
-
-
-		modelLoc = glGetUniformLocation(Anim2.Program, "model");
-		viewLoc = glGetUniformLocation(Anim2.Program, "view");
-		projLoc = glGetUniformLocation(Anim2.Program, "projection");
-		// Set matrices
-		glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
-		glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(0.0f, 0.1f, 0.0f));
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		glUniform1f(glGetUniformLocation(Anim.Program, "time"), tiempo);
-		ElReyPiernaIzq.Draw(lightingShader);
-		glBindVertexArray(0);
 		// Swap the screen buffers
 		glfwSwapBuffers(window);
 	}

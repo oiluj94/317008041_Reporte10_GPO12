@@ -1,13 +1,29 @@
-﻿  317008041_Practica10_GPO12.cpp
-D:\8 semestre\computacion grafica\practicas\pract10\317008041_Reporte10_GPO12\Practica_10\Practica_10\317008041_Practica10_GPO12.cpp(311,24): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-D:\8 semestre\computacion grafica\practicas\pract10\317008041_Reporte10_GPO12\Practica_10\Practica_10\317008041_Practica10_GPO12.cpp(532,15): warning C4305: '+=': truncamiento de 'double' a 'float'
-D:\8 semestre\computacion grafica\practicas\pract10\317008041_Reporte10_GPO12\Practica_10\Practica_10\317008041_Practica10_GPO12.cpp(539,15): warning C4305: '-=': truncamiento de 'double' a 'float'
-D:\8 semestre\computacion grafica\practicas\pract10\317008041_Reporte10_GPO12\Practica_10\Practica_10\317008041_Practica10_GPO12.cpp(545,15): warning C4305: '+=': truncamiento de 'double' a 'float'
-D:\8 semestre\computacion grafica\practicas\pract10\317008041_Reporte10_GPO12\Practica_10\Practica_10\317008041_Practica10_GPO12.cpp(551,15): warning C4305: '-=': truncamiento de 'double' a 'float'
-D:\8 semestre\computacion grafica\practicas\pract10\317008041_Reporte10_GPO12\Practica_10\Practica_10\317008041_Practica10_GPO12.cpp(768,11): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-D:\8 semestre\computacion grafica\practicas\pract10\317008041_Reporte10_GPO12\Practica_10\Practica_10\317008041_Practica10_GPO12.cpp(769,11): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-D:\8 semestre\computacion grafica\practicas\pract10\317008041_Reporte10_GPO12\Practica_10\Practica_10\317008041_Practica10_GPO12.cpp(773,18): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-D:\8 semestre\computacion grafica\practicas\pract10\317008041_Reporte10_GPO12\Practica_10\Practica_10\317008041_Practica10_GPO12.cpp(774,18): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-D:\8 semestre\computacion grafica\practicas\pract10\317008041_Reporte10_GPO12\Practica_10\Practica_10\317008041_Practica10_GPO12.cpp(776,10): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-D:\8 semestre\computacion grafica\practicas\pract10\317008041_Reporte10_GPO12\Practica_10\Practica_10\317008041_Practica10_GPO12.cpp(777,10): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+﻿  317008041_Reporte10_GPO12.cpp
+D:\8 semestre\computacion grafica\practicas\pract10\317008041_Reporte10_GPO12\Practica_10\Practica_10\317008041_Reporte10_GPO12.cpp(194,24): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+D:\8 semestre\computacion grafica\practicas\pract10\317008041_Reporte10_GPO12\Practica_10\Practica_10\317008041_Reporte10_GPO12.cpp(229,20): warning C4244: '=': conversión de 'double' a 'T'; posible pérdida de datos
+          with
+          [
+              T=float
+          ]
+D:\8 semestre\computacion grafica\practicas\pract10\317008041_Reporte10_GPO12\Practica_10\Practica_10\317008041_Reporte10_GPO12.cpp(230,20): warning C4244: '=': conversión de 'double' a 'T'; posible pérdida de datos
+          with
+          [
+              T=float
+          ]
+D:\8 semestre\computacion grafica\practicas\pract10\317008041_Reporte10_GPO12\Practica_10\Practica_10\317008041_Reporte10_GPO12.cpp(231,20): warning C4244: '=': conversión de 'double' a 'T'; posible pérdida de datos
+          with
+          [
+              T=float
+          ]
+D:\8 semestre\computacion grafica\practicas\pract10\317008041_Reporte10_GPO12\Practica_10\Practica_10\317008041_Reporte10_GPO12.cpp(321,25): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+D:\8 semestre\computacion grafica\practicas\pract10\317008041_Reporte10_GPO12\Practica_10\Practica_10\317008041_Reporte10_GPO12.cpp(341,26): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+D:\8 semestre\computacion grafica\practicas\pract10\317008041_Reporte10_GPO12\Practica_10\Practica_10\317008041_Reporte10_GPO12.cpp(508,11): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+D:\8 semestre\computacion grafica\practicas\pract10\317008041_Reporte10_GPO12\Practica_10\Practica_10\317008041_Reporte10_GPO12.cpp(509,11): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+D:\8 semestre\computacion grafica\practicas\pract10\317008041_Reporte10_GPO12\Practica_10\Practica_10\317008041_Reporte10_GPO12.cpp(513,18): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+D:\8 semestre\computacion grafica\practicas\pract10\317008041_Reporte10_GPO12\Practica_10\Practica_10\317008041_Reporte10_GPO12.cpp(514,18): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+D:\8 semestre\computacion grafica\practicas\pract10\317008041_Reporte10_GPO12\Practica_10\Practica_10\317008041_Reporte10_GPO12.cpp(516,10): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+D:\8 semestre\computacion grafica\practicas\pract10\317008041_Reporte10_GPO12\Practica_10\Practica_10\317008041_Reporte10_GPO12.cpp(517,10): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+soil2-debug.lib(image_DXT.obj) : warning LNK4099: no se encontró PDB '' con 'soil2-debug.lib(image_DXT.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+soil2-debug.lib(image_helper.obj) : warning LNK4099: no se encontró PDB '' con 'soil2-debug.lib(image_helper.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+soil2-debug.lib(SOIL2.obj) : warning LNK4099: no se encontró PDB '' con 'soil2-debug.lib(SOIL2.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
   Practica_10.vcxproj -> D:\8 semestre\computacion grafica\practicas\pract10\317008041_Reporte10_GPO12\Practica_10\Debug\Practica_10.exe
