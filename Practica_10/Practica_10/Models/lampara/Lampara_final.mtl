@@ -1,0 +1,21 @@
+newmtl Lampara_final:lambert1SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd abajo.jpg
+Ni 1.00
+newmtl Lampara_final:lambert2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd interruptor.jpg
+Ni 1.00
+newmtl Lampara_final:lambert2SG2
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd arriba.jpg
+Ni 1.00

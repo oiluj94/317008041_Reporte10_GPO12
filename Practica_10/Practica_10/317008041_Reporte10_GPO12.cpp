@@ -162,8 +162,10 @@ int main()
 	Model Piso((char*)"Models/Sea/Sea.obj");
 	Model SV((char*)"Models/Sea/salvavidas.obj");
 	//Model Box((char*)"Models/Box/Box.obj");
+	Model sillon((char*)"Models/simplesofa/simple_sofa.obj");
 	Model sofa((char*)"Models/sillon_individual/sillon_individual.obj");
-
+	Model mesa((char*)"Models/mesa de centro/mesa_de_centro.obj");
+	Model lamp((char*)"Models/lampara/lampara_final.obj");
 
 	// First, set the container's VAO (and VBO)
 	GLuint VBO, VAO;
@@ -282,7 +284,7 @@ int main()
 
 		// Set material properties
 		glUniform3f(glGetUniformLocation(lightingShader.Program, "material.specular"), 0.0f,0.0f,0.0f);
-		glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 4.0f);
+		glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 20.0f);
 
 		// Create camera transformations
 		glm::mat4 view;
@@ -334,25 +336,7 @@ int main()
 		//Piso.Draw(Anim);
 		glBindVertexArray(0);
 	     
-		Anim2.Use();
-
 		
-
-		tiempo = glfwGetTime() * speed;
-		// Get location objects for the matrices on the lamp shader (these could be different on a different shader)
-		modelLoc = glGetUniformLocation(Anim2.Program, "model");
-		viewLoc = glGetUniformLocation(Anim2.Program, "view");
-		projLoc = glGetUniformLocation(Anim2.Program, "projection");
-		// Set matrices
-		glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
-		glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(0.0f, 0.1f, 0.0f));
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		glUniform1f(glGetUniformLocation(Anim2.Program, "time"), tiempo);
-		//sofa.Draw(Anim2);
-		glBindVertexArray(0);
 
 		lightingShader.Use();
 		// Get location objects for the matrices on the lamp shader (these could be different on a different shader)
@@ -370,8 +354,8 @@ int main()
 		//casa.Draw(lightingShader);
 		glBindVertexArray(0);
 
+		
 		lightingShader.Use();
-
 		modelLoc = glGetUniformLocation(lightingShader.Program, "model");
 		viewLoc = glGetUniformLocation(lightingShader.Program, "view");
 		projLoc = glGetUniformLocation(lightingShader.Program, "projection");
@@ -380,14 +364,66 @@ int main()
 		glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(0.0f, 0.1f, 0.0f));
+		model = glm::translate(model, glm::vec3(0.0f, 0.1f, -2.0f));
+		model = glm::rotate(model, glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glUniform1f(glGetUniformLocation(lightingShader.Program, "time"), tiempo);
 		sofa.Draw(lightingShader);
+		model = glm::mat4(1);
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glBindVertexArray(0);
 
+		lightingShader.Use();
+		modelLoc = glGetUniformLocation(lightingShader.Program, "model");
+		viewLoc = glGetUniformLocation(lightingShader.Program, "view");
+		projLoc = glGetUniformLocation(lightingShader.Program, "projection");
+		// Set matrices
+		glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
+		glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(2.0f, 0.0f, 0.0f));
+		model = glm::rotate(model, glm::radians(180.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform1f(glGetUniformLocation(lightingShader.Program, "time"), tiempo);
+		sillon.Draw(lightingShader);
+		
+		
+		glBindVertexArray(0);
 
+		lightingShader.Use();
+		model = glm::mat4(1);
+		modelLoc = glGetUniformLocation(lightingShader.Program, "model");
+		viewLoc = glGetUniformLocation(lightingShader.Program, "view");
+		projLoc = glGetUniformLocation(lightingShader.Program, "projection");
+		// Set matrices
+		glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
+		glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(0.0f, -0.4f, 0.0f));
+		
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform1f(glGetUniformLocation(lightingShader.Program, "time"), tiempo);
+		mesa.Draw(lightingShader);
+		glBindVertexArray(0);
 
+		lightingShader.Use();
+		model = glm::mat4(1);
+		modelLoc = glGetUniformLocation(lightingShader.Program, "model");
+		viewLoc = glGetUniformLocation(lightingShader.Program, "view");
+		projLoc = glGetUniformLocation(lightingShader.Program, "projection");
+		// Set matrices
+		glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
+		glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f));
+
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform1f(glGetUniformLocation(lightingShader.Program, "time"), tiempo);
+		lamp.Draw(lightingShader);
+		glBindVertexArray(0);
 		// Swap the screen buffers
 		glfwSwapBuffers(window);
 	}
